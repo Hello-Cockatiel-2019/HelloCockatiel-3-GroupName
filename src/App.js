@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { lazy, Suspense } from 'react';
+import { Container, Spinner } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+const Nav = lazy(() => import('./components/Nav'));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      <Suspense fallback={
+        <div classNames="containe-fulids" >
+          <center>
+            <Spinner color="primary" />
+          </center>
+        </div>}>
+        <section>
+          <Nav />
+          <Container>
+            <h1>Hello world</h1>
+          </Container>
+        </section>
+      </Suspense>
+    </div >
   );
 }
 
