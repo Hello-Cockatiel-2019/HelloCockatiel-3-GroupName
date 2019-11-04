@@ -4,7 +4,8 @@ import { Container, Row, Col, Spinner } from 'reactstrap';
 import Darkmode from 'darkmode-js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Content = lazy(() => import('./components/Content'))
+const Mascot = lazy(() => import('./components/Mascot'));
+const Content = lazy(() => import('./components/Content'));
 const Nav = lazy(() => import('./components/Nav'));
 const Home = lazy(() => import('./components/Home'));
 const Carousel = lazy(() => import('./components/Carousel'));
@@ -49,30 +50,30 @@ const Image = styled.div`
 class App extends React.Component {
   render() {
     return (
-      <Image source="image2.svg">
-        <Suspense fallback={
-          <Container>
-
-            <div className={spincenter}>
-              <div className={myspinner}>
-                <Spinner color="success" />
-              </div>
-            </div>
-
-          </Container>
-        }>
-          <section>
-            <Nav />
+      <div>
+        <Image source="image2.svg">
+          <Suspense fallback={
             <Container>
-              <Row>
-                <Home />
-                <Content />
-                {/* <Carousel /> */}
-              </Row>
+              <div className={spincenter}>
+                <div className={myspinner}>
+                  <Spinner color="success" />
+                </div>
+              </div>
             </Container>
-          </section>
-        </Suspense>
-      </Image >
+          }>
+            <section>
+              <Nav />
+              <Container fluid>
+                <Row>
+                  <Mascot />
+                  <Home />
+                  <Content />
+                </Row>
+              </Container>
+            </section>
+          </Suspense>
+        </Image >
+      </div>
     );
   }
 }
