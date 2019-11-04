@@ -11,11 +11,9 @@ import {
 } from 'reactstrap';
 
 const navstlye = css`
-color:white;
+padding-right:200px;
 `
-const navstlyeitem = css`
-color:white;
-`
+
 const Example = (props) => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -29,10 +27,10 @@ const Example = (props) => {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className={navstlye} navbar>
                         <NavItem >
-                            <NavLink className={navstlyeitem} href="/components/">HOME</NavLink>
+                            <NavLink href="/components/">HOME    </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="#">ABOUT</NavLink>
+                            <NavLink href="#">ABOUT </NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink href="#">EVOLUTION</NavLink>
