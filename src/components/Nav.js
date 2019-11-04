@@ -1,58 +1,32 @@
-import React, { useState } from 'react';
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
-} from 'reactstrap';
+import React from 'react';
+import { Nav, NavItem, NavLink } from 'reactstrap';
 
-const Example = (props) => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggle = () => setIsOpen(!isOpen);
-
-    return (
-        <div>
-            <Navbar color="dark" dark expand="md">
-                <NavbarBrand href="/">reactstrap</NavbarBrand>
-                <NavbarToggler onClick={toggle} />
-                <Collapse isOpen={isOpen} navbar>
-                    <Nav className="ml-auto" navbar>
-                        <NavItem>
-                            <NavLink href="/components/Content">Components</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-                        </NavItem>
-                        <UncontrolledDropdown nav inNavbar>
-                            <DropdownToggle nav caret>
-                                Options
-              </DropdownToggle>
-                            <DropdownMenu right>
-                                <DropdownItem>
-                                    Option 1
-                </DropdownItem>
-                                <DropdownItem>
-                                    Option 2
-                </DropdownItem>
-                                <DropdownItem divider />
-                                <DropdownItem>
-                                    Reset
-                </DropdownItem>
-                            </DropdownMenu>
-                        </UncontrolledDropdown>
-                    </Nav>
-                </Collapse>
-            </Navbar>
-        </div>
-    );
-}
-
-export default Example;
+export default class NavBar extends React.Component {
+    render() {
+        return (
+            <div className="container-fluid">
+                {/* <br /><br /><br />
+            <br /><br /><br />
+            <br /><br /><br />
+            <br /><br /><br /> */}
+                <Nav>
+                    <NavItem>
+                        <NavLink><img src="/logo1.svg" /></NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#">HOME</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#">ABOUT</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#">ANATOMY</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#test">HABITAT</NavLink>
+                    </NavItem>
+                </Nav>
+            </div>
+        )
+    }
+};
