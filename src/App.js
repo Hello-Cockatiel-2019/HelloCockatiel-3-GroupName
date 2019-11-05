@@ -20,8 +20,8 @@ const Image = styled.div`
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background: url('/${props => props.source}') repeat fixed ; 
-    background-size: cover;                     
+    background: url('/${props => props.source}') repeat ; 
+    background-size: contain;                     
 `
 class App extends React.Component {
   render() {
@@ -37,7 +37,7 @@ class App extends React.Component {
           </Container>
         }>
           <section>
-            <Image source="image2.svg">
+            <Image source="image2.svg ">
               <Container fluid>
                 <Nav />
                 <Row>
@@ -47,7 +47,45 @@ class App extends React.Component {
                   <Col>
                     <Home />
                   </Col>
-                  <Content idd="test" />
+                  <Content idd="about" parallaxData={[
+                    {
+                      start: 0,
+                      end: 500,
+                      properties: [
+                        {
+                          startValue: 1,
+                          endValue: 1.5,
+                          property: 'scale',
+                        },
+                      ],
+                    },
+                  ]} />
+                  <Content idd="evolution" parallaxData={[
+                    {
+                      start: 700,
+                      end: 1000,
+                      properties: [
+                        {
+                          startValue: 1,
+                          endValue: 1.5,
+                          property: 'scale',
+                        },
+                      ],
+                    },
+                  ]} />
+                  <Content idd="anatomy" parallaxData={[
+                    {
+                      start: 1000,
+                      end: 1300,
+                      properties: [
+                        {
+                          startValue: 1,
+                          endValue: 1.5,
+                          property: 'scale',
+                        },
+                      ],
+                    },
+                  ]} />
                   {/* <Content idd="test1" /> */}
                 </Row>
               </Container>
