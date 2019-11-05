@@ -20,7 +20,7 @@ const Image = styled.div`
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background: url('/${props => props.source}') no-repeat fixed ; 
+    background: url('/${props => props.source}') repeat fixed ; 
     background-size: cover;                     
 `
 class App extends React.Component {
@@ -41,16 +41,20 @@ class App extends React.Component {
               <Container fluid>
                 <Nav />
                 <Row>
-                  <Mascot />
-                  <Home />
+                  <Col lg="10">
+                    <Mascot />
+                  </Col>
+                  <Col>
+                    <Home />
+                  </Col>
                   <Content idd="test" />
-                  <Content idd="test1" />
+                  {/* <Content idd="test1" /> */}
                 </Row>
               </Container>
             </Image >
           </section>
         </Suspense>
-      </div>
+      </div >
     );
   }
 }

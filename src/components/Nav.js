@@ -22,7 +22,7 @@ const Example = (props) => {
     return (
         <div className="container-fluid">
             <Navbar color="" dark expand="xl">
-                <NavbarBrand href="/"><img src="/logo1.svg" width="200px" height="150px" /></NavbarBrand>
+                <NavbarBrand href="/"><img className="img-fluid" src="/logo1.svg" width="200px" height="150px" /></NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className={navstlye} navbar>
@@ -30,13 +30,13 @@ const Example = (props) => {
                             <NavLink className="text-muted ml-4" href="#test"><h3>HOME</h3></NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink className="text-white ml-4" href="#test1"><h3>ABOUT</h3></NavLink>
+                            <NavLink className="text-muted ml-4" href="#test1"><h3>ABOUT</h3></NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink className="text-white ml-4" href="#"><h3>EVOLUTION</h3></NavLink>
+                            <NavLink className="text-muted ml-4" href="#"><h3>EVOLUTION</h3></NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink className="text-white ml-4 mr-5" href=""><h3>ANATOMY</h3></NavLink>
+                            <NavLink className="text-muted ml-4 mr-5" href=""><h3>ANATOMY</h3></NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink className="mr-5" href="#"><img src="/facebook1.svg" /></NavLink>
