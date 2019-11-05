@@ -1,7 +1,21 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import Plx from 'react-plx';
 import { css } from 'styled-components';
 
+const parallaxData = [
+    {
+        start: 0,
+        end: 500,
+        properties: [
+            {
+                startValue: 1,
+                endValue: 2,
+                property: 'scale',
+            },
+        ],
+    },
+];
 
 // Create the keyframes
 const rotate = keyframes`
@@ -31,6 +45,12 @@ export default class Mascot extends React.Component {
                 <Rotate>
                     <img src="/Slothh.png" width="450px" />
                 </Rotate>
+                <Plx
+                    className='MyAwesomeParallax'
+                    parallaxData={parallaxData}
+                >
+                    <h1 className="text-white">dfdf</h1>
+                </Plx>
             </div>
         )
     }

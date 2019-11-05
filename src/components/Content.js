@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Content = () => {
+const Content = (props) => {
     return (
         <div className="col-xl-12 my-5">
             < div className="" >
@@ -15,7 +15,7 @@ const Content = () => {
                 <h2>test</h2>
                 <h2>test</h2>
                 <h2>test</h2>
-                <h2 id="test">test</h2>
+                <h2 id={props.idd}>test</h2>
             </div >
         </div >
     )

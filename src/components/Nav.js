@@ -11,7 +11,7 @@ import {
 } from 'reactstrap';
 
 const navstlye = css`
-padding-right:200px;
+
 `
 
 const Example = (props) => {
@@ -27,19 +27,19 @@ const Example = (props) => {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className={navstlye} navbar>
                         <NavItem >
-                            <NavLink href="/components/">HOME    </NavLink>
+                            <NavLink className="text-white ml-5" href="#test"><h3>HOME</h3></NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="#">ABOUT </NavLink>
+                            <NavLink className="text-white ml-5" href="#test1">ABOUT </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="#">EVOLUTION</NavLink>
+                            <NavLink className="text-white ml-5" href="#">EVOLUTION</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="#test">ANATOMY</NavLink>
+                            <NavLink className="text-white ml-5 mr-5" href="">ANATOMY</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="#"><img src="/facebook1.svg" /></NavLink>
+                            <NavLink className="mr-5" href="#"><img src="/facebook1.svg" /></NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink href="#"><img src="/twitter1.svg" /></NavLink>

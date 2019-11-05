@@ -14,12 +14,7 @@ const spincenter = css`
   position: relative;
 `
 const myspinner = css`
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin: ;200px
 `
 const Image = styled.div`
     -webkit-background-size: cover;
@@ -28,51 +23,33 @@ const Image = styled.div`
     background: url('/${props => props.source}') no-repeat fixed ; 
     background-size: cover;                     
 `
-
-// var options = {
-//   bottom: '32px', // default: '32px'
-//   right: 'unset', // default: '32px'
-//   left: '32px', // default: 'unset'
-//   time: '0.5s', // default: '0.3s'
-//   mixColor: '#fff', // default: '#fff'
-//   backgroundColor: '#fff',  // default: '#fff'
-//   buttonColorDark: '#100f2c',  // default: '#100f2c'
-//   buttonColorLight: '#fff', // default: '#fff'
-//   saveInCookies: true, // default: true,
-//   label: '🌓', // default: ''
-//   autoMatchOsTheme: true // default: true
-// }
-// const darkmode = new Darkmode(options);
-// darkmode.showWidget();
-// darkmode.toggle();
-// darkmode.toggle();
-// console.log(darkmode.isActivated());
 class App extends React.Component {
   render() {
     return (
       <div>
-        <Image source="image2.svg">
-          <Suspense fallback={
-            <Container>
-              <div className={spincenter}>
-                <div className={myspinner}>
-                  <Spinner color="success" />
-                </div>
-              </div>
-            </Container>
-          }>
-            <section>
-              <Nav />
+        <Suspense fallback={
+          <Container>
+            <div className={myspinner}>
+              <center>
+                <Spinner color="primary" />
+              </center>
+            </div>
+          </Container>
+        }>
+          <section>
+            <Image source="image2.svg">
               <Container fluid>
+                <Nav />
                 <Row>
                   <Mascot />
                   <Home />
-                  <Content />
+                  <Content idd="test" />
+                  <Content idd="test1" />
                 </Row>
               </Container>
-            </section>
-          </Suspense>
-        </Image >
+            </Image >
+          </section>
+        </Suspense>
       </div>
     );
   }
