@@ -23,13 +23,16 @@ const rotate = keyframes`
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(30deg);
   }
 `;
 // Here we create a component that will rotate everything we pass in over two seconds
 const Rotate = styled.div`
     display: inline-block;
-    animation: ${rotate} 20s linear infinite;
+    animation: ${rotate} 3s;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
     padding-top:1em;
     padding-right: 0em;
     font-size: 1.2rem;
@@ -49,7 +52,7 @@ export default class Mascot extends React.Component {
                     className='MyAwesomeParallax'
                     parallaxData={parallaxData}
                 >
-                    <h1 className="text-white">dfdf</h1>
+                    <h1 className="text-white">Slothh</h1>
                 </Plx>
             </div>
         )

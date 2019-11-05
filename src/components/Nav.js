@@ -27,16 +27,16 @@ const Example = (props) => {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className={navstlye} navbar>
                         <NavItem >
-                            <NavLink className="text-white ml-5" href="#test"><h3>HOME</h3></NavLink>
+                            <NavLink className="text-muted ml-4" href="#test"><h3>HOME</h3></NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink className="text-white ml-5" href="#test1">ABOUT </NavLink>
+                            <NavLink className="text-white ml-4" href="#test1"><h3>ABOUT</h3></NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink className="text-white ml-5" href="#">EVOLUTION</NavLink>
+                            <NavLink className="text-white ml-4" href="#"><h3>EVOLUTION</h3></NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink className="text-white ml-5 mr-5" href="">ANATOMY</NavLink>
+                            <NavLink className="text-white ml-4 mr-5" href=""><h3>ANATOMY</h3></NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink className="mr-5" href="#"><img src="/facebook1.svg" /></NavLink>
