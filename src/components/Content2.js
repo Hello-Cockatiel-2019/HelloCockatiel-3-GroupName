@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Plx from 'react-plx';
-import Carousel from './Carousel';
 
 const bc = css`
     width:100px;
@@ -10,19 +9,19 @@ const bc = css`
 const Box = styled.div`
     background-color: black;
     width: 50%;
-    height:500px;
+    height:600px;
     border-radius: 35px;
     padding-top:22px;
     margin-top:76px
     margin-right:auto;
     margin-left:auto;
-    opacity: 0.85;
-    filter: alpha(opacity=50);
+    opacity: 0.75;
+    // filter: alpha(opacity=50);
 `
 const Boxin = styled.div`
     background-color: white;
     width:37em;
-    height:28em;
+    height:34.5em;
     border-radius: 20px;
     border-top-width:-2;
     margin-top:0px;
@@ -32,7 +31,7 @@ const Boxin = styled.div`
     padding-right:20px;
     padding-left:30px;
 `
-const Content = (props) => {
+const Content2 = (props) => {
     return (
         <div className="col-xl-12 " id={props.idd}>
             <bg>
@@ -43,14 +42,13 @@ const Content = (props) => {
                     <Box>
                         <Boxin>
                             <div className={bc}>
-                                <Carousel />
                             </div>
-                            About<br />
-                            สถานะการอนุรักษ์ : ไม่น่ากังวล<br />
-                            ชนิด : สัตว์เลี้ยงลูกด้วยนม<br />
-                            แหล่งมักพบ : เม็กซิโก , อเมริกากลาง และอเมริกาใต้<br />
-                            เรื่องจริงหรอเนี้ยย!!!<br />
-                            สลอธใช้เวลาในการเผาผลาญอาหารนานถึงหนึ่งเดือนสำหรับในการย่อยอาหารมื้อเดียว
+                            {props.title}<br />
+                            {props.data}<br /><br />
+                            {props.data1}<br /><br />
+                            {props.data2}<br /><br />
+                            {props.data3}<br /><br />
+                            {props.data4}
                         </Boxin>
                     </Box>
                 </Plx>
@@ -64,4 +62,4 @@ const Content = (props) => {
         </div >
     )
 }
-export default Content
+export default Content2
