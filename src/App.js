@@ -8,7 +8,6 @@ const Content = lazy(() => import('./components/Content'));
 const Content2 = lazy(() => import('./components/Content2'))
 const Nav = lazy(() => import('./components/Nav'));
 const BtntoTop = lazy(() => import('./components/BtntoTop'));
-const Anatomyimg = lazy(() => import('./components/Anatomyimg'))
 
 const myspinner = css`
   margin-top: 200px;
@@ -98,7 +97,6 @@ class App extends React.Component {
                   สลอธมีข้อกระดูกคอถึง 10 ข้อ มากกว่าสัตว์เลี้ยงลูกด้วยนมทั่วไป (ยีราฟที่คอยาวมากๆ มีเพียง 7 ข้อเท่านั้น)" 
                   data4="ซี่โครง ระหว่างซี่โครงของสลอธจะมีเนื้อเยื่อบางๆ ที่ตรึงกระเพาะอาหารไว้เพื่อรับน้ำหนัก กระเพาะอันเป็นเอกลักษณ์นี้มีขนาดใหญ่และมีน้ำหนักมากถึง 3 ใน 4 ของร่างกายเพื่อจุใบไม้ที่ยังไม่ย่อยสลายไว้"
                   image="" title="ANATOMY"/>
-                  <Anatomyimg/>
                 </Row>
               </Container>
             </div>
