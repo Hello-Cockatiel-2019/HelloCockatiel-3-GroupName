@@ -15,13 +15,13 @@ const rotate = keyframes`
 const Rotate = styled.div`
     display: inline-block;
     animation: ${rotate} 2s;
-    animation-duration: 2.5s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
     padding-top:1em;
     padding-right: auto;
     padding-left:auto;
-    font-size: 1.2rem;
+    
 `;
 export default class Mascot extends React.Component {
     render() {
@@ -34,7 +34,7 @@ export default class Mascot extends React.Component {
                 <Rotate>
                     <img src="/Slothnight.png" width="450px" />
                 </Rotate>
-            </div>
+            </div >
         )
     }
 }

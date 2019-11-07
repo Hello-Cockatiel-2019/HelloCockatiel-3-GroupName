@@ -10,9 +10,10 @@ const bc = css`
 const Box = styled.div`
     background-color: black;
     width: 50%;
-    height:500px;
+    height:100%;
     border-radius: 35px;
     padding-top:22px;
+    padding-bottom:22px;
     margin-top:76px
     margin-right:auto;
     margin-left:auto;
@@ -21,16 +22,18 @@ const Box = styled.div`
 `
 const Boxin = styled.div`
     background-color: white;
-    width:37em;
-    height:28em;
+    width:auto;
+    height:auto;
     border-radius: 20px;
     border-top-width:-2;
     margin-top:0px;
     margin-right: 20px;
     margin-left:20px;
+    margin-bottom:auto;
     padding-top:20px;
     padding-right:20px;
     padding-left:30px;
+    padding-bottom:22px;
 `
 const Content = (props) => {
     return (

@@ -7,8 +7,8 @@ const Mascot = lazy(() => import('./components/Mascot'));
 const Content = lazy(() => import('./components/Content'));
 const Content2 = lazy(() => import('./components/Content2'))
 const Nav = lazy(() => import('./components/Nav'));
-const Home = lazy(() => import('./components/Home'));
-const Btnchange = lazy(() => import('./components/Btnchange'))
+const BtntoTop = lazy(() => import('./components/BtntoTop'));
+const Anatomyimg = lazy(() => import('./components/Anatomyimg'))
 
 const myspinner = css`
   margin-top: 200px;
@@ -37,14 +37,14 @@ class App extends React.Component {
           <section>
             <div>
               <Container fluid>
-                <Nav />
+                <Nav idd="home" />
                 <Row>
                   <Col lg="10">
                     <Mascot />
                   </Col>
                   <Col>
                     {/* <Home /> */}
-                    <Btnchange/>
+                    <BtntoTop/>
                   </Col>
                   <Content idd="about" parallaxData={[
                     {
@@ -62,12 +62,12 @@ class App extends React.Component {
                   <Content2 idd="evolution" parallaxData={[
                     {
                       start: 700,
-                      end: 1000,
+                      end: 900,
                       properties: [
                         {
-                          startValue: 0,
-                          endValue: 360,
-                          property: 'rotate'
+                          startValue: 180,
+                          endValue: 0,
+                          property: 'rotateZ'
                         },
                       ],
                     },
@@ -77,13 +77,13 @@ class App extends React.Component {
                   />
                   <Content2 idd="anatomy" parallaxData={[
                     {
-                      start: 1500,
-                      end: 2000,
+                      start: 1300,
+                      end: 1500,
                       properties: [
                         {
-                          startValue: 1,
-                          endValue: 360,
-                          property: 'rotate'
+                          startValue: 0,
+                          endValue: 1,
+                          property: 'scale'
                         },
                       ],
                     },
@@ -96,7 +96,9 @@ class App extends React.Component {
                   data2="กระเพาะของสลอธจึงแบ่งเป็น 4 ช่องคล้ายสัตว์เคี้ยวเอื้องอย่างวัว พึ่งพาแบคทีเรียในกระเพาะให้ช่วยย่อยสลาย แต่ก็ทำอย่างเชื่องช้า ใบไม้เพียงใบเดียวอาจใช้เวลาย่อยเป็นเดือน "
                   data3="คอ
                   สลอธมีข้อกระดูกคอถึง 10 ข้อ มากกว่าสัตว์เลี้ยงลูกด้วยนมทั่วไป (ยีราฟที่คอยาวมากๆ มีเพียง 7 ข้อเท่านั้น)" 
-                  data4="ซี่โครง ระหว่างซี่โครงของสลอธจะมีเนื้อเยื่อบางๆ ที่ตรึงกระเพาะอาหารไว้เพื่อรับน้ำหนัก กระเพาะอันเป็นเอกลักษณ์นี้มีขนาดใหญ่และมีน้ำหนักมากถึง 3 ใน 4 ของร่างกายเพื่อจุใบไม้ที่ยังไม่ย่อยสลายไว้" title="ANATOMY"/>{/* <Content idd="test1" /> */}
+                  data4="ซี่โครง ระหว่างซี่โครงของสลอธจะมีเนื้อเยื่อบางๆ ที่ตรึงกระเพาะอาหารไว้เพื่อรับน้ำหนัก กระเพาะอันเป็นเอกลักษณ์นี้มีขนาดใหญ่และมีน้ำหนักมากถึง 3 ใน 4 ของร่างกายเพื่อจุใบไม้ที่ยังไม่ย่อยสลายไว้"
+                  image="" title="ANATOMY"/>
+                  <Anatomyimg/>
                 </Row>
               </Container>
             </div>

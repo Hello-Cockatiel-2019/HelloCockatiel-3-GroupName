@@ -58,7 +58,7 @@ const Example = (props) => {
                 onExiting={() => setAnimating(true)}
                 onExited={() => setAnimating(false)}
             >
-                <img src={item.src} alt={item.altText} style={{ width: '620px', height: '250px', marginLeft: '1px', marginTop: '1px', marginRight: '1px' }} />
+                <img src={item.src} alt={item.altText} style={{ width: '100%', height: '250px', marginLeft: '1px', marginTop: '1px', marginRight: '1px' }} />
                 {/* <CarouselCaption className="text-danger" captionText={item.caption} captionHeader={item.caption} /> */}
             </CarouselItem>
         );
